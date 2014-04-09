@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A463416118F5735E00B0284E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A463416018F5735E00B0284E /* Foundation.framework */; };
+		A463416318F5735E00B0284E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A463416218F5735E00B0284E /* CoreGraphics.framework */; };
+		A463416518F5735E00B0284E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A463416418F5735E00B0284E /* UIKit.framework */; };
+		A463416B18F5735E00B0284E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A463416918F5735E00B0284E /* InfoPlist.strings */; };
+		A463416D18F5735E00B0284E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A463416C18F5735E00B0284E /* main.m */; };
+		A463417118F5735E00B0284E /* MHGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A463417018F5735E00B0284E /* MHGAppDelegate.m */; };
+		A463417318F5735E00B0284E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A463417218F5735E00B0284E /* Images.xcassets */; };
+		A463417A18F5735E00B0284E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A463417918F5735E00B0284E /* XCTest.framework */; };
+		A463417B18F5735E00B0284E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A463416018F5735E00B0284E /* Foundation.framework */; };
+		A463417C18F5735E00B0284E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A463416418F5735E00B0284E /* UIKit.framework */; };
+		A463418418F5735E00B0284E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A463418218F5735E00B0284E /* InfoPlist.strings */; };
+		A463418618F5735E00B0284E /* MHGJavascriptCoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A463418518F5735E00B0284E /* MHGJavascriptCoreTests.m */; };
+		A463419118F5740200B0284E /* MHGJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = A463419018F5740200B0284E /* MHGJavascriptBridge.m */; };
+		A463419318F58BE200B0284E /* MHGJavascriptBridge.js in Sources */ = {isa = PBXBuildFile; fileRef = A463419218F58BE200B0284E /* MHGJavascriptBridge.js */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A463417D18F5735E00B0284E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A463415518F5735E00B0284E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A463415C18F5735E00B0284E;
+			remoteInfo = MHGJavascriptCore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A463415D18F5735E00B0284E /* MHGJavascriptCore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MHGJavascriptCore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A463416018F5735E00B0284E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A463416218F5735E00B0284E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A463416418F5735E00B0284E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A463416818F5735E00B0284E /* MHGJavascriptCore-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MHGJavascriptCore-Info.plist"; sourceTree = "<group>"; };
+		A463416A18F5735E00B0284E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A463416C18F5735E00B0284E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A463416E18F5735E00B0284E /* MHGJavascriptCore-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MHGJavascriptCore-Prefix.pch"; sourceTree = "<group>"; };
+		A463416F18F5735E00B0284E /* MHGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MHGAppDelegate.h; sourceTree = "<group>"; };
+		A463417018F5735E00B0284E /* MHGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHGAppDelegate.m; sourceTree = "<group>"; };
+		A463417218F5735E00B0284E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A463417818F5735E00B0284E /* MHGJavascriptCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MHGJavascriptCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A463417918F5735E00B0284E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A463418118F5735E00B0284E /* MHGJavascriptCoreTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MHGJavascriptCoreTests-Info.plist"; sourceTree = "<group>"; };
+		A463418318F5735E00B0284E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A463418518F5735E00B0284E /* MHGJavascriptCoreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MHGJavascriptCoreTests.m; sourceTree = "<group>"; };
+		A463418F18F5740200B0284E /* MHGJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHGJavascriptBridge.h; sourceTree = "<group>"; };
+		A463419018F5740200B0284E /* MHGJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHGJavascriptBridge.m; sourceTree = "<group>"; };
+		A463419218F58BE200B0284E /* MHGJavascriptBridge.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = MHGJavascriptBridge.js; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A463415A18F5735E00B0284E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A463416318F5735E00B0284E /* CoreGraphics.framework in Frameworks */,
+				A463416518F5735E00B0284E /* UIKit.framework in Frameworks */,
+				A463416118F5735E00B0284E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A463417518F5735E00B0284E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A463417A18F5735E00B0284E /* XCTest.framework in Frameworks */,
+				A463417C18F5735E00B0284E /* UIKit.framework in Frameworks */,
+				A463417B18F5735E00B0284E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A463415418F5735E00B0284E = {
+			isa = PBXGroup;
+			children = (
+				A463416618F5735E00B0284E /* MHGJavascriptCore */,
+				A463417F18F5735E00B0284E /* MHGJavascriptCoreTests */,
+				A463415F18F5735E00B0284E /* Frameworks */,
+				A463415E18F5735E00B0284E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A463415E18F5735E00B0284E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A463415D18F5735E00B0284E /* MHGJavascriptCore.app */,
+				A463417818F5735E00B0284E /* MHGJavascriptCoreTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A463415F18F5735E00B0284E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A463416018F5735E00B0284E /* Foundation.framework */,
+				A463416218F5735E00B0284E /* CoreGraphics.framework */,
+				A463416418F5735E00B0284E /* UIKit.framework */,
+				A463417918F5735E00B0284E /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A463416618F5735E00B0284E /* MHGJavascriptCore */ = {
+			isa = PBXGroup;
+			children = (
+				A463416F18F5735E00B0284E /* MHGAppDelegate.h */,
+				A463417018F5735E00B0284E /* MHGAppDelegate.m */,
+				A463417218F5735E00B0284E /* Images.xcassets */,
+				A463416718F5735E00B0284E /* Supporting Files */,
+				A463418F18F5740200B0284E /* MHGJavascriptBridge.h */,
+				A463419018F5740200B0284E /* MHGJavascriptBridge.m */,
+				A463419218F58BE200B0284E /* MHGJavascriptBridge.js */,
+			);
+			path = MHGJavascriptCore;
+			sourceTree = "<group>";
+		};
+		A463416718F5735E00B0284E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A463416818F5735E00B0284E /* MHGJavascriptCore-Info.plist */,
+				A463416918F5735E00B0284E /* InfoPlist.strings */,
+				A463416C18F5735E00B0284E /* main.m */,
+				A463416E18F5735E00B0284E /* MHGJavascriptCore-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A463417F18F5735E00B0284E /* MHGJavascriptCoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				A463418518F5735E00B0284E /* MHGJavascriptCoreTests.m */,
+				A463418018F5735E00B0284E /* Supporting Files */,
+			);
+			path = MHGJavascriptCoreTests;
+			sourceTree = "<group>";
+		};
+		A463418018F5735E00B0284E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A463418118F5735E00B0284E /* MHGJavascriptCoreTests-Info.plist */,
+				A463418218F5735E00B0284E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A463415C18F5735E00B0284E /* MHGJavascriptCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A463418918F5735F00B0284E /* Build configuration list for PBXNativeTarget "MHGJavascriptCore" */;
+			buildPhases = (
+				A463415918F5735E00B0284E /* Sources */,
+				A463415A18F5735E00B0284E /* Frameworks */,
+				A463415B18F5735E00B0284E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MHGJavascriptCore;
+			productName = MHGJavascriptCore;
+			productReference = A463415D18F5735E00B0284E /* MHGJavascriptCore.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A463417718F5735E00B0284E /* MHGJavascriptCoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A463418C18F5735F00B0284E /* Build configuration list for PBXNativeTarget "MHGJavascriptCoreTests" */;
+			buildPhases = (
+				A463417418F5735E00B0284E /* Sources */,
+				A463417518F5735E00B0284E /* Frameworks */,
+				A463417618F5735E00B0284E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A463417E18F5735E00B0284E /* PBXTargetDependency */,
+			);
+			name = MHGJavascriptCoreTests;
+			productName = MHGJavascriptCoreTests;
+			productReference = A463417818F5735E00B0284E /* MHGJavascriptCoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A463415518F5735E00B0284E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MHG;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Hokuang;
+				TargetAttributes = {
+					A463417718F5735E00B0284E = {
+						TestTargetID = A463415C18F5735E00B0284E;
+					};
+				};
+			};
+			buildConfigurationList = A463415818F5735E00B0284E /* Build configuration list for PBXProject "MHGJavascriptCore" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A463415418F5735E00B0284E;
+			productRefGroup = A463415E18F5735E00B0284E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A463415C18F5735E00B0284E /* MHGJavascriptCore */,
+				A463417718F5735E00B0284E /* MHGJavascriptCoreTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A463415B18F5735E00B0284E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A463416B18F5735E00B0284E /* InfoPlist.strings in Resources */,
+				A463417318F5735E00B0284E /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A463417618F5735E00B0284E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A463418418F5735E00B0284E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A463415918F5735E00B0284E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A463419118F5740200B0284E /* MHGJavascriptBridge.m in Sources */,
+				A463419318F58BE200B0284E /* MHGJavascriptBridge.js in Sources */,
+				A463416D18F5735E00B0284E /* main.m in Sources */,
+				A463417118F5735E00B0284E /* MHGAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A463417418F5735E00B0284E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A463418618F5735E00B0284E /* MHGJavascriptCoreTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A463417E18F5735E00B0284E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A463415C18F5735E00B0284E /* MHGJavascriptCore */;
+			targetProxy = A463417D18F5735E00B0284E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A463416918F5735E00B0284E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A463416A18F5735E00B0284E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A463418218F5735E00B0284E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A463418318F5735E00B0284E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A463418718F5735F00B0284E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A463418818F5735F00B0284E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A463418A18F5735F00B0284E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MHGJavascriptCore/MHGJavascriptCore-Prefix.pch";
+				INFOPLIST_FILE = "MHGJavascriptCore/MHGJavascriptCore-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A463418B18F5735F00B0284E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MHGJavascriptCore/MHGJavascriptCore-Prefix.pch";
+				INFOPLIST_FILE = "MHGJavascriptCore/MHGJavascriptCore-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A463418D18F5735F00B0284E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MHGJavascriptCore.app/MHGJavascriptCore";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MHGJavascriptCore/MHGJavascriptCore-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MHGJavascriptCoreTests/MHGJavascriptCoreTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A463418E18F5735F00B0284E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MHGJavascriptCore.app/MHGJavascriptCore";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MHGJavascriptCore/MHGJavascriptCore-Prefix.pch";
+				INFOPLIST_FILE = "MHGJavascriptCoreTests/MHGJavascriptCoreTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A463415818F5735E00B0284E /* Build configuration list for PBXProject "MHGJavascriptCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A463418718F5735F00B0284E /* Debug */,
+				A463418818F5735F00B0284E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A463418918F5735F00B0284E /* Build configuration list for PBXNativeTarget "MHGJavascriptCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A463418A18F5735F00B0284E /* Debug */,
+				A463418B18F5735F00B0284E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A463418C18F5735F00B0284E /* Build configuration list for PBXNativeTarget "MHGJavascriptCoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A463418D18F5735F00B0284E /* Debug */,
+				A463418E18F5735F00B0284E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A463415518F5735E00B0284E /* Project object */;
+}
