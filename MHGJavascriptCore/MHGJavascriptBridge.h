@@ -8,16 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void(^MHGNativeCodeBlock)(NSArray *);
+typedef void(^MHGNativeCodeBlock)(NSDictionary *paramDict);
 
 @interface MHGJavascriptBridge : NSObject<UIWebViewDelegate>
 
 @property (nonatomic, unsafe_unretained) UIWebView *webView;
 
-@property (nonatomic, strong) NSMutableDictionary *nativeBlocks;
-
 - (BOOL)interceptRequest:(NSURLRequest *)request;
 
 - (NSString *)callJavascriptFunction:(NSString *)functionName withParams:(NSArray *)params;
+
+- (void)setBlockName:(NSString *)blockName block:(MHGNativeCodeBlock)block;
 
 @end

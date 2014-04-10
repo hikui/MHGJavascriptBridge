@@ -7,27 +7,16 @@
 //
 
 #import "MHGAppDelegate.h"
-#import "MHGJavascriptBridge.h"
+#import "MHGWebViewController.h"
 
 @implementation MHGAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
-    MHGJavascriptBridge *bridge = [[MHGJavascriptBridge alloc]init];
-    
-    MHGNativeCodeBlock b = ^(NSArray *params){
-        NSLog(@"%@",params);
-    };
-    
-    bridge.nativeBlocks[@"hahaha"] = [b copy];
-    
-    NSURL *url = [NSURL URLWithString:@"mhgjavascriptbridge://mhgjavascriptbridge.herkuang.info/call_native_block/hahaha/?params=%5B1%2C2%2C3%2C4%2C5%2C%7B%22aaa%22%3A%22dddd%22%7D%5D"];
-    NSURLRequest *req = [[NSURLRequest alloc]initWithURL:url];
-    
-    [bridge interceptRequest:req];
-    
+    MHGWebViewController *webVC = [[MHGWebViewController alloc]initWithNibName:nil bundle:nil];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:webVC];
+    self.window.rootViewController = nav;
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

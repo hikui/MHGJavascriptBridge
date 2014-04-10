@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<script src="MHGJavascriptBridge.js"></script>
+	<script>
+        function loadImage(placeHolder){
+        	var imageURL = placeHolder.getAttribute('url');
+            MHGJavascriptBridge.callNativeBlock('loadImage',{'url':imageURL});
+        }
+    
+    function setImageWithURL(url){
+        var img = document.getElementsByTagName('img')[0];
+        img.src = url;
+    }
+	</script>
+</head>
+<body>
+    <div style="width:100%">
+        <img src="loading.jpg" url="http://s.doyo.cn/img/50/3c/b02b9cbc7fe910000286.jpg" alt="loading" style="max-width:100%" onClick="javascript:loadImage(this)">
+    </div>
+	
+</body>
+</html>

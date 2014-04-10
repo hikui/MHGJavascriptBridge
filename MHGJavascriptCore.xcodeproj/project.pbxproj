@@ -21,6 +21,12 @@
 		A463418618F5735E00B0284E /* MHGJavascriptCoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A463418518F5735E00B0284E /* MHGJavascriptCoreTests.m */; };
 		A463419118F5740200B0284E /* MHGJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = A463419018F5740200B0284E /* MHGJavascriptBridge.m */; };
 		A463419318F58BE200B0284E /* MHGJavascriptBridge.js in Sources */ = {isa = PBXBuildFile; fileRef = A463419218F58BE200B0284E /* MHGJavascriptBridge.js */; };
+		EC57FBA118F6226F00297DD7 /* MHGWebViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = EC57FB9E18F6226F00297DD7 /* MHGWebViewController.h */; };
+		EC57FBA218F6226F00297DD7 /* MHGWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC57FB9F18F6226F00297DD7 /* MHGWebViewController.m */; };
+		EC57FBA318F6226F00297DD7 /* MHGWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC57FBA018F6226F00297DD7 /* MHGWebViewController.xib */; };
+		EC57FBA518F6240900297DD7 /* template.html in Resources */ = {isa = PBXBuildFile; fileRef = EC57FBA418F6240900297DD7 /* template.html */; };
+		EC57FBA618F6292D00297DD7 /* MHGJavascriptBridge.js in Resources */ = {isa = PBXBuildFile; fileRef = A463419218F58BE200B0284E /* MHGJavascriptBridge.js */; };
+		EC57FBAA18F6359700297DD7 /* loading.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC57FBA918F6359700297DD7 /* loading.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,11 @@
 		A463418F18F5740200B0284E /* MHGJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHGJavascriptBridge.h; sourceTree = "<group>"; };
 		A463419018F5740200B0284E /* MHGJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHGJavascriptBridge.m; sourceTree = "<group>"; };
 		A463419218F58BE200B0284E /* MHGJavascriptBridge.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = MHGJavascriptBridge.js; sourceTree = "<group>"; };
+		EC57FB9E18F6226F00297DD7 /* MHGWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.objj.h; path = MHGWebViewController.h; sourceTree = "<group>"; };
+		EC57FB9F18F6226F00297DD7 /* MHGWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHGWebViewController.m; sourceTree = "<group>"; };
+		EC57FBA018F6226F00297DD7 /* MHGWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MHGWebViewController.xib; sourceTree = "<group>"; };
+		EC57FBA418F6240900297DD7 /* template.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = template.html; sourceTree = "<group>"; };
+		EC57FBA918F6359700297DD7 /* loading.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = loading.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +123,7 @@
 		A463416618F5735E00B0284E /* MHGJavascriptCore */ = {
 			isa = PBXGroup;
 			children = (
+				EC57FBA918F6359700297DD7 /* loading.jpg */,
 				A463416F18F5735E00B0284E /* MHGAppDelegate.h */,
 				A463417018F5735E00B0284E /* MHGAppDelegate.m */,
 				A463417218F5735E00B0284E /* Images.xcassets */,
@@ -119,6 +131,10 @@
 				A463418F18F5740200B0284E /* MHGJavascriptBridge.h */,
 				A463419018F5740200B0284E /* MHGJavascriptBridge.m */,
 				A463419218F58BE200B0284E /* MHGJavascriptBridge.js */,
+				EC57FB9E18F6226F00297DD7 /* MHGWebViewController.h */,
+				EC57FB9F18F6226F00297DD7 /* MHGWebViewController.m */,
+				EC57FBA018F6226F00297DD7 /* MHGWebViewController.xib */,
+				EC57FBA418F6240900297DD7 /* template.html */,
 			);
 			path = MHGJavascriptCore;
 			sourceTree = "<group>";
@@ -228,6 +244,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC57FBA518F6240900297DD7 /* template.html in Resources */,
+				EC57FBA318F6226F00297DD7 /* MHGWebViewController.xib in Resources */,
+				EC57FBA618F6292D00297DD7 /* MHGJavascriptBridge.js in Resources */,
+				EC57FBAA18F6359700297DD7 /* loading.jpg in Resources */,
 				A463416B18F5735E00B0284E /* InfoPlist.strings in Resources */,
 				A463417318F5735E00B0284E /* Images.xcassets in Resources */,
 			);
@@ -252,6 +272,8 @@
 				A463419318F58BE200B0284E /* MHGJavascriptBridge.js in Sources */,
 				A463416D18F5735E00B0284E /* main.m in Sources */,
 				A463417118F5735E00B0284E /* MHGAppDelegate.m in Sources */,
+				EC57FBA218F6226F00297DD7 /* MHGWebViewController.m in Sources */,
+				EC57FBA118F6226F00297DD7 /* MHGWebViewController.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

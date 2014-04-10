@@ -78,6 +78,12 @@
 
 @end
 
+@interface MHGJavascriptBridge ()
+
+@property (nonatomic, strong) NSMutableDictionary *nativeBlocks;
+
+@end
+
 @implementation MHGJavascriptBridge
 
 - (id)init
@@ -91,21 +97,18 @@
 
 - (BOOL)interceptRequest:(NSURLRequest *)request
 {
-    // 格式：mhgjavascriptbridge://call_native_block/blockName?params=[1,2,{"xx":"yy"},"mmm"]
+    // 格式：mhgjavascriptbridge://call_native_block/blockName?params={"x":"y","z":[1,3,4]}
     
     static NSString *scheme = @"mhgjavascriptbridge";
     NSURL *url = request.URL;
     if (![url.scheme isEqualToString:scheme]) {
         return NO;
     }
-
-    
-    NSArray *pathComponents = url.pathComponents;
-    if (![pathComponents[1] isEqualToString:@"call_native_block"]) {
+    if (![url.host isEqualToString:@"call_native_block"]) {
         return NO;
     }
-    
-    NSString *blockName = pathComponents[2];
+    NSArray *pathComponents = url.pathComponents;
+    NSString *blockName = pathComponents[1];
     MHGNativeCodeBlock block = self.nativeBlocks[blockName];
     if (block == NULL) {
         return NO;
@@ -114,7 +117,7 @@
     queryString = [queryString substringFromIndex:7];
     
     if (queryString) {
-        NSArray *nativeParams = [NSJSONSerialization JSONObjectWithData:[queryString dataUsingEncoding:NSUTF8StringEncoding] options:0 error:nil];
+        NSDictionary *nativeParams = [NSJSONSerialization JSONObjectWithData:[queryString dataUsingEncoding:NSUTF8StringEncoding] options:0 error:nil];
         if (nativeParams == nil) {
             return NO;
         }
@@ -130,15 +133,36 @@
 {
     NSMutableString *jsParamString = [[NSMutableString alloc]init];
     
+    if (params == nil) {
+        return [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"%@()",functionName]];
+    }
+    
     __block BOOL shouldContinue = YES;
     [params enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        NSData *JSONData = [NSJSONSerialization dataWithJSONObject:obj options:0 error:nil];
-        NSString *JSONString = [[NSString alloc]initWithData:JSONData encoding:NSUTF8StringEncoding];
-        if (JSONString == nil) {
-            *stop = YES;
-            shouldContinue = NO;
+        
+        if ([obj isKindOfClass:[NSArray class]] || [obj isKindOfClass:[NSDictionary class]]) {
+            NSData *JSONData = [NSJSONSerialization dataWithJSONObject:obj options:0 error:nil];
+            NSString *JSONString = [[NSString alloc]initWithData:JSONData encoding:NSUTF8StringEncoding];
+            if (JSONString == nil) {
+                *stop = YES;
+                shouldContinue = NO;
+            }else{
+                [jsParamString appendString:JSONString];
+            }
+        }else if([obj isKindOfClass:[NSString class]]){
+            NSString *str = obj;
+            NSMutableString *escapedString = [[NSMutableString alloc]initWithCapacity:str.length];
+            for (int i=0; i<str.length; i++) {
+                unichar c = [str characterAtIndex:i];
+                if (c=='\"'||c=='\''||c=='\n'||c=='\\'||c=='\t'||c=='\r'||c=='\0'||c=='\a'||c=='\b'||c=='\f') {
+                    [escapedString appendString:@"\\"];
+                }
+                [escapedString appendFormat:@"%c",c];
+            }
+            [jsParamString appendFormat:@"\"%@\"",escapedString];
+        }else{
+            [jsParamString appendFormat:@"%@",obj];
         }
-        [jsParamString appendString:JSONString];
         if (idx != params.count-1) {
             [jsParamString appendString:@","];
         }
@@ -148,6 +172,11 @@
     }
     NSString *call = [NSString stringWithFormat:@"%@(%@)",functionName,jsParamString];
     return [self.webView stringByEvaluatingJavaScriptFromString:call];
+}
+
+- (void)setBlockName:(NSString *)blockName block:(MHGNativeCodeBlock)block
+{
+    self.nativeBlocks[blockName] = [block copy];
 }
 
 @end
