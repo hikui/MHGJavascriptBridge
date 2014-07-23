@@ -31,8 +31,16 @@
     [super viewDidLoad];
     
     self.bridge.webView = self.webView;
-    [self.bridge setBlockName:@"hahaha" block:^(NSDictionary *dict) {
-        NSLog(@"%@",dict);
+    [self.bridge setBlockName:@"func1" block:^(NSDictionary *dict) {
+        NSLog(@"func1");
+    }];
+    
+    [self.bridge setBlockName:@"func2" block:^(NSDictionary *dict) {
+        NSLog(@"func2");
+    }];
+    
+    [self.bridge setBlockName:@"func3" block:^(NSDictionary *dict) {
+        NSLog(@"func3");
     }];
     
     __weak typeof(self) weakMe = self;

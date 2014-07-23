@@ -15,11 +15,22 @@
         var img = document.getElementsByTagName('img')[0];
         img.src = url;
     }
+    
+    function button1ClickEventHandler(){
+        MHGJavascriptBridge.callNativeBlock('func1');
+        MHGJavascriptBridge.callNativeBlock('func2');
+        MHGJavascriptBridge.callNativeBlock('func3');
+    }
+    
 	</script>
 </head>
 <body>
     <div style="width:100%">
         <img src="loading.jpg" url="http://s.doyo.cn/img/50/3c/b02b9cbc7fe910000286.jpg" alt="loading" style="max-width:100%" onClick="javascript:loadImage(this)">
+    </div>
+    
+    <div>
+        <button onClick="button1ClickEventHandler()">button1</button>
     </div>
 	
 </body>
