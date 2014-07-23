@@ -61,7 +61,7 @@
 + (NSString *)stringByURLEncoding:(NSString *)str
 {
     NSString *result = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL,(CFStringRef)str,NULL,
-																		   (CFStringRef)@";/?:@&=$+{}<>,",kCFStringEncodingUTF8));
+                                                                                             (CFStringRef)@";/?:@&=$+{}<>,",kCFStringEncodingUTF8));
 	return result;
 }
 
@@ -113,9 +113,11 @@
     if (block == NULL) {
         return NO;
     }
-    NSString *queryString = [MHGJavascripBridgeUtility stringByURLDecoding:url.query];
-    queryString = [queryString substringFromIndex:7];
-    
+    NSString *queryString = nil;
+    if (url.query) {
+        queryString = [MHGJavascripBridgeUtility stringByURLDecoding:url.query];
+        queryString = [queryString substringFromIndex:7];
+    }
     if (queryString) {
         NSDictionary *nativeParams = [NSJSONSerialization JSONObjectWithData:[queryString dataUsingEncoding:NSUTF8StringEncoding] options:0 error:nil];
         if (nativeParams == nil) {
