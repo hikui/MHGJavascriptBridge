@@ -156,10 +156,7 @@
             NSMutableString *escapedString = [[NSMutableString alloc]initWithCapacity:str.length];
             for (int i=0; i<str.length; i++) {
                 unichar c = [str characterAtIndex:i];
-                if (c=='\"'||c=='\''||c=='\n'||c=='\\'||c=='\t'||c=='\r'||c=='\0'||c=='\a'||c=='\b'||c=='\f') {
-                    [escapedString appendString:@"\\"];
-                }
-                [escapedString appendFormat:@"%c",c];
+                [escapedString appendString:[self escapedCharToJavascriptPresentation:c]];
             }
             [jsParamString appendFormat:@"\"%@\"",escapedString];
         }else{
@@ -174,6 +171,46 @@
     }
     NSString *call = [NSString stringWithFormat:@"%@(%@)",functionName,jsParamString];
     return [self.webView stringByEvaluatingJavaScriptFromString:call];
+}
+
+- (NSString *)escapedCharToJavascriptPresentation:(unichar)c {
+    NSString *jsPresentation = nil;
+    switch (c) {
+        case '\"':
+            jsPresentation = @"\\\"";
+            break;
+        case '\'':
+            jsPresentation = @"\\\'";
+            break;
+        case '\n':
+            jsPresentation = @"\\n";
+            break;
+        case '\\':
+            jsPresentation = @"\\\\";
+            break;
+        case '\t':
+            jsPresentation = @"\\t";
+            break;
+        case '\r':
+            jsPresentation = @"\\r";
+            break;
+        case '\0':
+            jsPresentation = @"\\0";
+            break;
+        case '\a':
+            jsPresentation = @"\\a";
+            break;
+        case '\b':
+            jsPresentation = @"\\b";
+            break;
+        case '\f':
+            jsPresentation = @"\\f";
+            break;
+        default:
+            jsPresentation = [NSString stringWithFormat:@"%c",c];
+            break;
+    }
+    return jsPresentation;
 }
 
 - (void)setBlockName:(NSString *)blockName block:(MHGNativeCodeBlock)block

@@ -54,7 +54,7 @@
             });
         });
     }];
-    
+//    [weakMe.bridge callJavascriptFunction:@"setImageWithURL" withParams:@[@"tt\n\t\\"]];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"refresh" style:UIBarButtonItemStyleBordered target:self action:@selector(refresh)];
     
     NSString *templatePath = [[NSBundle mainBundle] pathForResource:@"template" ofType:@"html"];
