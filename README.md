@@ -74,7 +74,7 @@ Javascript部分设置比较简单，最基本的设置是要保证UIWebView中�
 		MHGJavascriptBridge.callNativeBlock('button1OnClick',{'url':imageURL});
 	};
 
-	<button onClick="button1ClickEventHandler">button 1</button>
+	<button onClick="button1ClickEventHandler()">button 1</button>
 	
 这时，点击button1时，就能触发Objective C的代码了。`MHGJavascriptBridge.callNativeBlock`有两个参数，第一个参数是在Objective C中注册的block名字，第二个参数是传给block里面的`dict`的额外信息。其中第二个参数必须是一个字典（或者说是一个Javascript Object），或者什么都不传。
 
